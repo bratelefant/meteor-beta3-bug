@@ -1,9 +1,12 @@
 This is just a demo app for reproducing an issue during upgrading from meteor `2.14` to `3.0-beta.0`. On macOS I do
 
-  meteor update --release 3.0-beta.0
+```
+meteor update --release 3.0-beta.0
+```
 
 and get a minisat error
 
+```
   MINISAT-out: Cannot enlarge memory arrays. Either (1) compile with -s TOTAL_MEMORY=X with X higher than the current value 67108864, (2) compile with ALLOW_MEMORY_GROWTH which adjusts the size at runtime but prevents some optimizations, or (3) set Module.TOTAL_MEMORY before the program runs. 
   MINISAT-err: Cannot enlarge memory arrays. Either (1) compile with -s TOTAL_MEMORY=X with X higher than the current value 67108864, (2) compile with ALLOW_MEMORY_GROWTH which adjusts the size at runtime but prevents some optimizations, or (3) set Module.TOTAL_MEMORY before the program runs.
   abort() at Error                              
@@ -48,4 +51,4 @@ and get a minisat error
     at Command.func (/tools/cli/commands-packages.js:1812:29)
     at /tools/cli/main.js:1527:15
   If this abort() is unexpected, build with -s ASSERTIONS=1 which can give more information.
-
+```
